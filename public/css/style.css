@@ -2,6 +2,35 @@
 	width: 560px;
 }
 
+.toolbar {
+	width: 100%;
+    height: 56px;
+    padding: 0 16px;
+    display: flex;
+}
+
+.vid-top-margin {
+	margin-top: 56px;
+}
+
+#ytlogo {
+    width: 130px;
+    height: 54px;
+    -ms-flex: none;
+    -webkit-flex: none;
+    flex: none;
+}
+
+#embd-new {
+    position: relative;
+    margin-top: 17px;
+    margin-left: 90px;
+}
+
 p {
 	width: 560px;
+}
+
+body {
+	font-family: Arial Rounded MT Bold;
 }
