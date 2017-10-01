@@ -1,6 +1,6 @@
 class Video
 
-	attr_accessor :id. :title, :body
+	attr_accessor :id, :title, :description, :url, :genre
 
 	#Opens connection to database
 	def self.open_connection
@@ -72,5 +72,5 @@ class Video
 		sql = "DELETE FROM video WHERE id = #{id}"
 		conn.exec(sql)
 	end
-	
+
 end
