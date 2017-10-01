@@ -72,14 +72,5 @@ class Video
 		sql = "DELETE FROM video WHERE id = #{id}"
 		conn.exec(sql)
 	end
-
-
-
-
-
-
-
-
-
-
+	
 end
