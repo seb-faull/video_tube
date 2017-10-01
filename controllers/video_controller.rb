@@ -20,7 +20,7 @@ class VideosController < Sinatra::Base
 
 
 	#New
-	get "/videos" do
+	get "/videos/new" do
 		erb :"videos/new"
 	end
 
