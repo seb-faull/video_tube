@@ -7,7 +7,7 @@ class VideosController < Sinatra::Base
 	set :root, File.join(File.dirname(__FILE__), "..")
 
 	set :views, Proc.new { File.join(root, 'views') }
-	
+
 
 
 	#Index
@@ -15,6 +15,13 @@ class VideosController < Sinatra::Base
 		@page_header = "All videos"
 		@videos = Video.all
 		erb :"videos/index"
+	end
+
+
+
+	#New
+	get "/videos" do
+		erb :"videos/new"
 	end
 
 
