@@ -63,8 +63,12 @@ class VideosController < Sinatra::Base
 
 
 
+	#Delete
+	delete "/videos/:id" do
+		Video.destroy(params[:id])
 
-
+		redirect "/videos"
+	end
 
 
 
