@@ -50,6 +50,25 @@ class Video
 
 
 
+	#Create & Update
+	def save
+		conn = Video.open_connection
+
+		if (!self.id)
+			sql = "INSERT INTO video (title, description, url, genre) VALUES ( '#{self.title}', '#{self.description}', '#{self.url}', '#{self.genre}')"
+		else
+			sql = "UPDATE video SET title = '#{self.title}', description = '#{self.description}', url = '#{self.url}', genre = '#{self.genre}' WHERE id = #{self.id}"
+		end
+
+		conn.exec(sql)
+	end
+
+
+
+	#Delete
+
+
+
 
 
 
