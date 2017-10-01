@@ -49,6 +49,16 @@ class VideosController < Sinatra::Base
 
 
 
+	#Update
+	put "/videos/:id" do
+		video = Video.find(params[:id])
+		video.title = params[:title]
+		video.description = params[:description]
+		video.url = params[:url]
+		video.genre = params[:genre]
+	end
+
+
 
 
 
