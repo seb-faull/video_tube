@@ -1,17 +1,17 @@
-<h1> <%= @page_header%> </h1>
+	<h1> <%= @page_header%> </h1>
 
-	<% @videos.each do |video| %>
+		<% @videos.each do |video| %>
 
-	<div class="vid-top-margin">
-		<h2> <%= video.title %> </h2>
+		<div class="vid-top-margin">
+			<h2> <%= video.title %> </h2>
 
-		<a href="/videos/<%= video.id %>"> <p><%= video.description %></p> </a>
-		<a href="/videos/<%= video.id %>/edit">Edit</a>
+			<a href="/videos/<%= video.id %>"> <p><%= video.description %></p> </a>
+			<a href="/videos/<%= video.id %>/edit">Edit</a>
 
-		<form action="/videos/<%= video.id %>" method="POST">
-			<input type="hidden" name="_method" value="DELETE">		
-			<input type="submit" value="Delete">
-		</form>
-	</div>
+			<form action="/videos/<%= video.id %>" method="POST">
+				<input type="hidden" name="_method" value="DELETE">		
+				<input type="submit" value="Delete" class="delete" style=" color: red; background-color: black; margin-top: 20px">
+			</form>
+		</div>
 
-	<% end %>
+		<% end %>
